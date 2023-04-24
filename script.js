@@ -76,7 +76,7 @@ paperBtn.addEventListener('click', function() {
 
 // Scissorsbtn Event added
 scissorsBtn.addEventListener('click', function() {
-    result.innerHTML = "Scissors";
+    playerChoice.innerHTML = "Scissors";
     game();
     hideGameBtns();
 })
