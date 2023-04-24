@@ -8,7 +8,7 @@ const scissorsBtn = document.querySelector('#scissors-btn');
 const startBtn = document.querySelector('#start-btn');
 const playAgainBtn = document.querySelector('#play-again');
 const gameBtnDiv = document.querySelector('#game-btns');
-const choices = ['Rock', 'Paper', 'Scissors']
+const choices = ['🪨', '🧻', '✂️']
 
 
 // Function to get a randomIndex to use on the choices Array
@@ -20,24 +20,24 @@ function getRandomIndex() {
 // Function to render Computer Choices and Results
 function game() {
     computerChoice.innerHTML = choices[getRandomIndex()];
-    if (playerChoice.innerHTML === "Rock" && computerChoice.innerHTML === "Rock") {
-        result.innerHTML = "Draw";
-    } else if (playerChoice.innerHTML === "Rock" && computerChoice.innerHTML === "Paper") {
-        result.innerHTML = "Lose";
-    } else if (playerChoice.innerHTML === "Rock" && computerChoice.innerHTML === "Scissors") {
-        result.innerHTML = "Win";
-    } else if (playerChoice.innerHTML === "Paper" && computerChoice.innerHTML === "Rock") {
-        result.innerHTML = "Win";
-    } else if (playerChoice.innerHTML === "Paper" && computerChoice.innerHTML === "Paper") {
-        result.innerHTML = "Draw";
-    } else if (playerChoice.innerHTML === "Paper" && computerChoice.innerHTML === "Scissors") {
-        result.innerHTML = "Lose";
-    } else if (playerChoice.innerHTML === "Scissors" && computerChoice.innerHTML === "Rock") {
-        result.innerHTML = "Lose";
-    } else if (playerChoice.innerHTML === "Scissors" && computerChoice.innerHTML === "Paper") {
-        result.innerHTML = "Win";
-    } else if (playerChoice.innerHTML === "Scissors" && computerChoice.innerHTML === "Scissors") {
-        result.innerHTML = "Draw";
+    if (playerChoice.innerHTML === "🪨" && computerChoice.innerHTML === "🪨") {
+        result.innerHTML = "🫶";
+    } else if (playerChoice.innerHTML === "🪨" && computerChoice.innerHTML === "🧻") {
+        result.innerHTML = "💔";
+    } else if (playerChoice.innerHTML === "🪨" && computerChoice.innerHTML === "✂️") {
+        result.innerHTML = "❤️";
+    } else if (playerChoice.innerHTML === "🧻" && computerChoice.innerHTML === "🪨") {
+        result.innerHTML = "❤️";
+    } else if (playerChoice.innerHTML === "🧻" && computerChoice.innerHTML === "🧻") {
+        result.innerHTML = "🫶";
+    } else if (playerChoice.innerHTML === "🧻" && computerChoice.innerHTML === "✂️") {
+        result.innerHTML = "💔";
+    } else if (playerChoice.innerHTML === "✂️" && computerChoice.innerHTML === "🪨") {
+        result.innerHTML = "💔";
+    } else if (playerChoice.innerHTML === "✂️" && computerChoice.innerHTML === "🧻") {
+        result.innerHTML = "❤️";
+    } else if (playerChoice.innerHTML === "✂️" && computerChoice.innerHTML === "✂️") {
+        result.innerHTML = "🫶";
     }
 }
 
@@ -62,21 +62,21 @@ function playAgain() {
 
 // Rockbtn Event added
 rockBtn.addEventListener('click', function() {
-    playerChoice.innerHTML = "Rock";
+    playerChoice.innerHTML = "🪨";
     game();
     hideGameBtns();
 })
 
 // Paperbtn Event added
 paperBtn.addEventListener('click', function() {
-    playerChoice.innerHTML = 'Paper';
+    playerChoice.innerHTML = '🧻';
     game();
     hideGameBtns();
 })
 
 // Scissorsbtn Event added
 scissorsBtn.addEventListener('click', function() {
-    playerChoice.innerHTML = "Scissors";
+    playerChoice.innerHTML = "✂️";
     game();
     hideGameBtns();
 })

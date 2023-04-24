@@ -4,15 +4,20 @@
 
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     height: 100vh;
 }
 
+.wrapper {
+    min-width: 300px;
+}
+
 .show {
-    visibility: visible;
+    display: block;
 }
 
 .hide {
-    visibility: hidden;
+    display: none;
 }
